@@ -11,6 +11,7 @@ class Teacher(models.Model):
 	email = models.EmailField()
 	id_number = models.IntegerField()
 	profession = models.CharField(max_length=50)
+	profile_picture = models.ImageField(upload_to="teacher_image",blank=True,null=True)
 
 	def __str__(self):
-		return self.first_name + self.last_name
+		return self.first_name + " " + self.last_name

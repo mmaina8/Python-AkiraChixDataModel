@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AkiraChix</title>
+</head>
+
+<body>
+	<table>
+<!-- 		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Registration Number</th>
+			<th>Profession</th>
+		</tr>
+
+		<tr>
+			<th>James</th>
+			<th>Mwai</th>
+			<th>001</th>
+			<th>Consultant</th>
+		</tr>
+
+		<tr>
+			<th>Jeff</th>
+			<th>Muthondu</th>
+			<th>002</th>
+			<th>Designer</th>
+		</tr> -->
+
+		<!-- for loop -->
+		{% for teacher in teachers %}
+
+		<!-- templating syntax for browser to understand ... django templating language (imported the data/output all records to the user-->
+		<tr>
+			<td>{{teacher.first_name}}</td>
+			<td>{{teacher.last_name}}</td>
+			<td>{{teacher.registration_no}}</td>
+			<td>{{teacher.profession}}</td>
+			<td>{{teacher.email}}</td>
+		</tr>
+
+		{% endfor %}
+
+	</table>
+
+</body>
+</html>
