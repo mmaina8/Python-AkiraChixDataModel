@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AkiraChix</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<style type="text/css">
+		body { background-image: url(..img/blur3.jpg);}
+		h3   {color: black; text-align: center; margin: 20px;}
+		form    {color: black; 
+				text-align: center; 
+				background-color: rgba(0,0,0,0.4); 
+				padding: 30px; 
+				margin: 5px; 
+				border-radius: 10px;
+				box-shadow: 0 3px 46px rgba(0,0,0,0.2);
+				width: 600px;
+				margin: 0 auto;
+				}
+	</style>
+</head>
+
+<body> 
+		<h3>Student Registration</h3>
+		<form method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+
+			<input type="submit" name="SAVE">
+		</form>
+</body>
+</html>

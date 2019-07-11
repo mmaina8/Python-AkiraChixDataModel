@@ -3,30 +3,25 @@
 
 <head>
 	<title>AkiraChix</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
-	<table>
-<!-- 		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Registration Number</th>
-			<th>Profession</th>
-		</tr>
+	<div class="container w-50">
+		<table class="table table-striped">
 
-		<tr>
-			<th>James</th>
-			<th>Mwai</th>
-			<th>001</th>
-			<th>Consultant</th>
-		</tr>
-
-		<tr>
-			<th>Jeff</th>
-			<th>Muthondu</th>
-			<th>002</th>
-			<th>Designer</th>
-		</tr> -->
+			<tr>
+				<button><a href="/student/add/">Add Student</a></button>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Registration Number</th>
+				<th>Id Number</th>
+				<th>Email</th>
+				<th>More details</th>
+				<th>Edit Details</th>
+			</tr>
 
 		<!-- for loop -->
 		{% for student in students %}
@@ -38,11 +33,14 @@
 			<td>{{student.registration_number}}</td>
 			<td>{{student.id_number}}</td>
 			<td>{{student.email}}</td>
+			<td><a href="/student/detail/{{student.pk}}/">More Details</a></td>
+			<td><a href="/student/edit/{{student.pk}}/">Edit Details</a></td>
 		</tr>
 
 		{% endfor %}
 
-	</table>
+		</table>
+	</div>
 
 </body>
 </html>

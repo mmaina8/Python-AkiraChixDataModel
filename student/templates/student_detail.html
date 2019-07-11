@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AkiraChix</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+	<div class="container">
+	<img src="{{student.profile_picture.url}}">
+	<style type="text/css">
+		img {width: 100px; height: 100px;}
+	</style>
+	<p><div class="first">First Name:</div>{{student.first_name}}</p>
+	<p><div class="last">Last Name:</div>{{student.last_name}}</p>
+	<p><div class="reg">Registration Number:</div>{{student.registration_number}}</p>
+	<p><div class="date">Date Of Birth:</div>{{student.date_of_birth}}</p>
+	<p><div class="res">Place of Residence:</div>{{student.place_of_residence}}</p>
+	<p><div class="no">Phone Number:</div>{{student.phone_number}}</p>
+	<p><div class="email">Email:</div>{{student.email}}</p>
+	<p><div class="id">Id Number:</div>{{student.id_number}}</p>
+
+	<td><a href="/student/edit/{{student.pk}}/">Edit Details</a></td>
+	</div>
+
+</body>
+</html>

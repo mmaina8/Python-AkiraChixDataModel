@@ -3,46 +3,43 @@
 
 <head>
 	<title>AkiraChix</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
-	<table>
-<!-- 		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Registration Number</th>
-			<th>Profession</th>
-		</tr>
+	<div class="container">
+		<table class="table table-striped">
 
-		<tr>
-			<th>James</th>
-			<th>Mwai</th>
-			<th>001</th>
-			<th>Consultant</th>
-		</tr>
+			<tr>
+				<button><a href="/course/add/">Add Course</a></button>
+				<th>Name</th>
+				<th>Duration in months</th>
+				<th>Course Number</th>
+				<th>Course Description</th>
+				<th>More details</th>
+				<th>Edit Details</th>
+			</tr>
 
-		<tr>
-			<th>Jeff</th>
-			<th>Muthondu</th>
-			<th>002</th>
-			<th>Designer</th>
-		</tr> -->
+			<!-- for loop -->
+			{% for course in courses %}
 
-		<!-- for loop -->
-		{% for course in courses %}
+			<!-- templating syntax for browser to understand ... django templating language (imported the data/output all records to the user-->
+			<tr>
+				<td>{{course.name}}</td>
+				<td>{{course.duration_in_months}}</td>
+				<td>{{course.course_number}}</td>
+				<td>{{course.description}}</td>
 
-		<!-- templating syntax for browser to understand ... django templating language (imported the data/output all records to the user-->
-		<tr>
-			<td>{{course.name}}</td>
-			<td>{{course.duration_in_months}}</td>
-			<td>{{course.registration_no}}</td>
-			<td>{{course.course_number}}</td>
-			<td>{{course.description}}</td>
-		</tr>
+				<td><a href="/course/detail/{{course.pk}}/">More Details</a></td>
+				<td><a href="/course/edit/{{course.pk}}/">Edit Details</a></td>
+			</tr>
 
-		{% endfor %}
+			{% endfor %}
 
-	</table>
+		</table>
+	</div>
 
 </body>
 </html>

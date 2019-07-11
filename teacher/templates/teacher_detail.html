@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AkiraChix</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+	<img src="{{teacher.profile_picture.url}}">
+	<style type="text/css">
+		img {width: 100px; height: 100px;}
+	</style>
+	<p><div class="first">First Name:</div>{{teacher.first_name}}</p>
+	<p><div class="last">Last Name:</div>{{teacher.last_name}}</p>
+	<p><div class="reg">Registration Number:</div>{{teacher.registration_no}}</p>
+	<p><div class="no">Phone Number:</div>{{teacher.email}}</p>
+	<p><div class="prof">Profession:</div>{{teacher.profession}}</p>
+	<p><div class="id">Id Number:</div>{{teacher.id_number}}</p>
+
+	<td><a href="/teacher/edit/{{teacher.pk}}/">Edit Details</a></td>
+
+</body>
+</html>
