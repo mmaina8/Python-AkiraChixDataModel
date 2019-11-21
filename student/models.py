@@ -37,5 +37,5 @@ class Student(models.Model):
             raise ValidationError("above 18, below 30")
         return age
 
-    def teachers(self):
-        return [course.teacher for course in self.course.all()]
+    # def teachers(self):
+    #     return [course.teacher for course in self.course.all()]
