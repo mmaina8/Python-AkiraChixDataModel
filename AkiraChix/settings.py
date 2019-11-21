@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'api',
     'rest_framework',
+    'core',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -128,6 +130,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+LOGIN_REDIRECT_URL="/"
+ACCOUNT_ACTIVATION_DAYS="30"
+
 MEDIA_ROOT = os.path.join(BASE_DIR,'student/student_image')
 MEDIA_ROOT = os.path.join(BASE_DIR,'teacher/teacher_image')
 

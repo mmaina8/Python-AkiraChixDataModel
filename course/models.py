@@ -8,7 +8,7 @@ class Course(models.Model):
 	course_number = models.CharField(max_length=50)
 	description = models.TextField()
 
-	teacher = models.ForeignKey(Teacher,on_delete=models.PROTECT)
+	teacher = models.ForeignKey(Teacher,on_delete=models.PROTECT,blank=False)
 
 	def __str__(self):
 		return self.name

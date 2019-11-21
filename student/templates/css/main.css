@@ -1,0 +1,71 @@
+body {
+	background-color: #ddd;
+	font-family: arial;
+	color: #222;
+	background-image: url(../img/blur3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.login-cont {
+	max-width: 400px;
+	margin: 10% auto;
+	min-height: 300px;
+}
+
+.login-cont h3 {
+	margin: 0 0 10px 5px;
+	color: #fff;
+}
+
+.login-cont form {
+	background-color: rgba(255,255,255,0.4);
+	padding: 30px;
+	margin: 5px;
+	border-radius: 10px;
+	box-shadow: 0 3px 46px rgba(0,0,0,0.5); 
+}
+
+.login-cont form ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.login-cont form ul li {
+	margin: 0 0 10px 0;
+	padding: 0px;
+	list-style: none;
+}
+
+.login-cont form ul li:last-child {
+	margin: 0px;
+}
+
+.login-cont form label {
+	display: block;
+	padding-bottom: 5px;
+	font-size: 12px;
+}
+
+.login-cont form input+label {
+	display: inline;
+	padding-right: 10px;
+}
+
+.login-cont form input[type=text],.login-cont form input[type=email],.login-cont form input[type=password] {
+	border-radius: 5px;
+	width: 328px;
+	height: 35px;
+	display: block;
+	text-indent: 10px;
+	border: 1px solid #ccc;
+}
+
+.login-cont form input[type=submit] {
+	width: 330px;
+	background-color: #555;
+	color: #fff;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+}

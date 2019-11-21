@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Karibu</title>
+</head>
+<body>
+	<h1>Welcome Home</h1>
+	{% include "base.html" %}
+	<p>
+
+	{% if user.is_authenticated %}
+		Welcome {{user.username}}
+		<br></br>
+		<a href="/accounts/logout/">Logout</a>
+	{% else %}
+		Welcome guest,
+		please <a href="/accounts/register/">register</a>
+		or <a href="/accounts/login/">login</a>
+	{% endif %}
+
+	</p>
+<!-- 	<img src="img/top.png">
+ -->
+<!-- 	<img src="img/bg1.jpg">
+ -->
+	<style type="text/css">
+	body {background-color: powderblue;}
+		h1 { text-align: center; padding-top: 200px;}
+		p{  color: black; 
+			text-align: center; 
+			background-color: rgba(0,0,0,0.4); 
+			padding: 30px; 
+			margin: 5px; 
+			border-radius: 10px;
+			box-shadow: 0 3px 46px rgba(0,0,0,0.2);
+			width: 300px;
+			margin: 0 auto;}
+
+	</style>
+
+</body>
+</html>
